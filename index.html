@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Резюме Unity разработчика - Александр Федотов</title>
+ <style>
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: 'Segoe UI', system-ui, sans-serif;
+ line-height: 1.6;
+ color: #fff;
+ background: #222;
+ padding: 2rem;
+ }
+
+.container {
+ max-width: 800px;
+ margin: 0 auto;
+ background: #333;
+ padding: 2.5rem;
+ border-radius: 12px;
+ box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+ }
+
+ h1 {
+ color: #ccc;
+ margin-bottom: 1.5rem;
+ border-bottom: 3px solid #3498db;
+ padding-bottom: 0.5rem;
+ }
+
+.contact-info {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 1rem;
+ margin-bottom: 2rem;
+ }
+
+.section {
+ margin-bottom: 2rem;
+ }
+
+ h2 {
+ color: #3498db;
+ margin-bottom: 1.5rem;
+ font-size: 1.4rem;
+ }
+
+.skills-category {
+ margin-bottom: 1.5rem;
+ }
+
+.skills-category h3 {
+ color: #e74c3c;
+ margin: 1rem 0;
+ font-size: 1.1rem;
+ padding-left: 28px;
+ position: relative;
+ }
+
+.skills-category h3::before {
+ content: "▹";
+ position: absolute;
+ left: 0;
+ color: #3498db;
+ }
+
+.skills-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+ gap: 0.8rem;
+ }
+
+.skill-chip {
+ background: #444;
+ padding: 0.6rem 1rem;
+ border-radius: 20px;
+ border: 1px solid #555;
+ font-size: 0.9rem;
+ transition: all 0.3s ease;
+ }
+
+.skill-chip:hover {
+ background: #4a4a4a;
+ transform: translateY(-2px);
+ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+ }
+
+.portfolio-item {
+ background: #444;
+ padding: 1rem;
+ border-radius: 8px;
+ margin-bottom: 1.5rem;
+ }
+
+.portfolio-item img {
+ width: 100%;
+ height: 250px;
+ object-fit: cover;
+ border-radius: 6px;
+ margin: 1rem 0;
+ border: 1px solid #555;
+ box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+ transition: transform 0.3s ease;
+ }
+
+.portfolio-item:hover img {
+ transform: scale(1.02);
+ }
+
+.links {
+ display: flex;
+ gap: 1rem;
+ margin-top: 0.8rem;
+ }
+
+ a {
+ color: #3498db;
+ text-decoration: none;
+ transition: color 0.3s ease;
+ }
+
+ a:hover {
+ color: #2980b9;
+ }
+
+.highlight {
+ color: #e74c3c;
+ font-weight: 500;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <h1>Александр Федотов</h1>
+ 
+ <div class="contact-info">
+ <div><span class="highlight">Телефон:</span> 8-929-609-21-01</div>
+ <div><span class="highlight">GitHub:</span> <a href="https://github.com/Barlogdao" target="_blank">Barlogdao</a></div>
+ <div><span class="highlight">Telegram:</span> <a href="https://t.me/Barlogdao" target="_blank">@Barlogdao</a></div>
+ <div><span class="highlight">Email:</span> <a href="mailto:barlogdao@gmail.com">barlogdao@gmail.com</a></div>
+ </div>
+
+ <div class="section">
+ <h2>Обо мне</h2>
+ <p>Опыт работы на Unity с 2022 года. Ищу возможность создавать качественные игры в команде энтузиастов, для которых разработка - это стиль жизни, позволяющий дарить людям новый и увлекательный игровой опыт.</p>
+ </div>
+
+ <div class="section">
+ <h2>Навыки</h2>
+ 
+ <div class="skills-category">
+ <h3>Основные технологии</h3>
+ <div class="skills-grid">
+ <div class="skill-chip">Unity Engine</div>
+ <div class="skill-chip">C# Programming</div>
+ <div class="skill-chip">ООП & SOLID</div>
+ <div class="skill-chip">Git Version Control</div>
+ </div>
+ </div>
+
+ <div class="skills-category">
+ <h3>Фреймворки и библиотеки</h3>
+ <div class="skills-grid">
+ <div class="skill-chip">Zenject (DI)</div>
+ <div class="skill-chip">DOTween</div>
+ <div class="skill-chip">UniRX/R3</div>
+ <div class="skill-chip">UniTask</div>
+ <div class="skill-chip">Addressables</div>
+ <div class="skill-chip">Cinemachine</div>
+ <div class="skill-chip">Input System</div>
+ <div class="skill-chip">LINQ</div>
+ </div>
+ </div>
+
+ <div class="skills-category">
+ <h3>Оптимизация</h3>
+ <div class="skills-grid">
+ <div class="skill-chip">Object Pooling</div>
+ <div class="skill-chip">Texture Atlases</div>
+ <div class="skill-chip">LOD Systems</div>
+ <div class="skill-chip">Profiling</div>
+ <div class="skill-chip">Web Optimization</div>
+ </div>
+ </div>
+
+ <div class="skills-category">
+ <h3>Дополнительно</h3>
+ <div class="skills-grid">
+ <div class="skill-chip">uGUI Верстка</div>
+ <div class="skill-chip">Team Collaboration</div>
+ <div class="skill-chip">Design Patterns</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="section">
+ <h2>Портфолио</h2>
+ 
+ <div class="portfolio-item">
+ <h3>Казуальная 3D Adventure (пиратский сеттинг)</h3>
+ <img src="https://private-user-images.githubusercontent.com/109853370/381297092-436374aa-99aa-43e9-806b-60c1a8d28602.jpg" 
+ alt="Скриншот 3D игры в пиратском сеттинге">
+ <div class="links">
+ <a href="https://yandex.ru/games/app/363189" target="_blank" rel="noopener noreferrer">▶ Играть</a>
+ <a href="https://github.com/Barlogdao/Pirate-World" target="_blank" rel="noopener noreferrer">📁 Исходный код</a>
+ </div>
+ </div>
+
+ <div class="portfolio-item">
+ <h3>2D аркада про смешивание коктейлей</h3>
+ <img src="https://private-user-images.githubusercontent.com/109853370/381700093-bcbf0a1c-b767-44b6-8e58-a2570b04a308.jpg" 
+ alt="Скриншот аркады про коктейли">
+ <div class="links">
+ <a href="https://barlogdao.itch.io/i-am-off" target="_blank" rel="noopener noreferrer">▶ Играть</a>
+ <a href="https://github.com/Barlogdao/I-am-OFF" target="_blank" rel="noopener noreferrer">📁 Исходный код</a>
+ </div>
+ </div>
+
+ <div class="portfolio-item">
+ <h3>2D Action с системой апгрейдов</h3>
+ <img src="https://private-user-images.githubusercontent.com/109853370/352671202-979b440f-1a02-4658-8930-0865e94dd2ac.png" 
+ alt="Скриншот 2D экшн игры">
+ <div class="links">
+ <a href="https://barlogdao.itch.io/lighthouse" target="_blank" rel="noopener noreferrer">▶ Играть</a>
+ <a href="https://github.com/Barlogdao/LightHouse" target="_blank" rel="noopener noreferrer">📁 Исходный код</a>
+ </div>
+ </div>
+ </div>
+ </div>
+</body>
+</html>
