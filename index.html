@@ -19,7 +19,7 @@
  padding: 2rem;
  }
 
-.container {
+ .container {
  max-width: 800px;
  margin: 0 auto;
  background: #333;
@@ -28,22 +28,35 @@
  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
  }
 
- h1 {
- color: #ccc;
- margin-bottom: 1.5rem;
- border-bottom: 3px solid #3498db;
- padding-bottom: 0.5rem;
+ .profile-header {
+ display: flex;
+ gap: 2rem;
+ align-items: center;
+ margin-bottom: 2rem;
  }
 
-.contact-info {
+ .profile-photo {
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ border: 3px solid #3498db;
+ object-fit: cover;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+ }
+
+ .contact-info {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  gap: 1rem;
+ }
+
+ .section {
  margin-bottom: 2rem;
  }
 
-.section {
- margin-bottom: 2rem;
+ h1 {
+ color: #ccc;
+ margin-bottom: 1rem;
  }
 
  h2 {
@@ -52,11 +65,29 @@
  font-size: 1.4rem;
  }
 
-.skills-category {
+ .highlight {
+ color: #e74c3c;
+ font-weight: 500;
+ }
+
+ @media (max-width: 600px) {
+ .profile-header {
+ flex-direction: column;
+ text-align: center;
+ }
+ 
+ .profile-photo {
+ width: 120px;
+ height: 120px;
+ }
+ }
+
+ /* Стили для навыков */
+ .skills-category {
  margin-bottom: 1.5rem;
  }
 
-.skills-category h3 {
+ .skills-category h3 {
  color: #e74c3c;
  margin: 1rem 0;
  font-size: 1.1rem;
@@ -64,20 +95,20 @@
  position: relative;
  }
 
-.skills-category h3::before {
+ .skills-category h3::before {
  content: "▹";
  position: absolute;
  left: 0;
  color: #3498db;
  }
 
-.skills-grid {
+ .skills-grid {
  display: grid;
  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
  gap: 0.8rem;
  }
 
-.skill-chip {
+ .skill-chip {
  background: #444;
  padding: 0.6rem 1rem;
  border-radius: 20px;
@@ -86,20 +117,21 @@
  transition: all 0.3s ease;
  }
 
-.skill-chip:hover {
+ .skill-chip:hover {
  background: #4a4a4a;
  transform: translateY(-2px);
  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
  }
 
-.portfolio-item {
+ /* Стили для портфолио */
+ .portfolio-item {
  background: #444;
  padding: 1rem;
  border-radius: 8px;
  margin-bottom: 1.5rem;
  }
 
-.portfolio-item img {
+ .portfolio-item img {
  width: 100%;
  height: 250px;
  object-fit: cover;
@@ -110,11 +142,11 @@
  transition: transform 0.3s ease;
  }
 
-.portfolio-item:hover img {
+ .portfolio-item:hover img {
  transform: scale(1.02);
  }
 
-.links {
+ .links {
  display: flex;
  gap: 1rem;
  margin-top: 0.8rem;
@@ -129,22 +161,21 @@
  a:hover {
  color: #2980b9;
  }
-
-.highlight {
- color: #e74c3c;
- font-weight: 500;
- }
  </style>
 </head>
 <body>
  <div class="container">
+ <div class="profile-header">
+ <img src="img\IMG_1094-3.jpg" alt="Фото Александра Федотова" class="profile-photo">
+ <div>
  <h1>Александр Федотов</h1>
- 
  <div class="contact-info">
  <div><span class="highlight">Телефон:</span> 8-929-609-21-01</div>
  <div><span class="highlight">GitHub:</span> <a href="https://github.com/Barlogdao" target="_blank">Barlogdao</a></div>
  <div><span class="highlight">Telegram:</span> <a href="https://t.me/Barlogdao" target="_blank">@Barlogdao</a></div>
  <div><span class="highlight">Email:</span> <a href="mailto:barlogdao@gmail.com">barlogdao@gmail.com</a></div>
+ </div>
+ </div>
  </div>
 
  <div class="section">
@@ -205,7 +236,7 @@
  
  <div class="portfolio-item">
  <h3>Казуальная 3D Adventure (пиратский сеттинг)</h3>
- <img src="https://private-user-images.githubusercontent.com/109853370/381297092-436374aa-99aa-43e9-806b-60c1a8d28602.jpg" 
+ <img src="img\PW2.jpg" 
  alt="Скриншот 3D игры в пиратском сеттинге">
  <div class="links">
  <a href="https://yandex.ru/games/app/363189" target="_blank" rel="noopener noreferrer">▶ Играть</a>
@@ -215,7 +246,7 @@
 
  <div class="portfolio-item">
  <h3>2D аркада про смешивание коктейлей</h3>
- <img src="https://private-user-images.githubusercontent.com/109853370/381700093-bcbf0a1c-b767-44b6-8e58-a2570b04a308.jpg" 
+ <img src="img\N1.jpg" 
  alt="Скриншот аркады про коктейли">
  <div class="links">
  <a href="https://barlogdao.itch.io/i-am-off" target="_blank" rel="noopener noreferrer">▶ Играть</a>
@@ -225,7 +256,7 @@
 
  <div class="portfolio-item">
  <h3>2D Action с системой апгрейдов</h3>
- <img src="https://private-user-images.githubusercontent.com/109853370/352671202-979b440f-1a02-4658-8930-0865e94dd2ac.png" 
+ <img src="img\lh.png" 
  alt="Скриншот 2D экшн игры">
  <div class="links">
  <a href="https://barlogdao.itch.io/lighthouse" target="_blank" rel="noopener noreferrer">▶ Играть</a>
